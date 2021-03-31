@@ -8,41 +8,61 @@
             <div class="col-md-12 text-center">
                 <h1 class="mt-0 mb-3 text-danger">Generate Transcript</h1>
                 <div class="breadcrumbs">
-                    <p class="mb-0 text-white"><a class="text-white" href="#">Home</a>  /  <span class="text-success">About</span></p>
+                    <p class="mb-0 text-white"><a class="text-white" href="#">Home</a>  /  <span class="text-alert">Log Out</span></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 <section>
-    <select class="selectpicker" data-style="btn-primary">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-    <select class="selectpicker" data-style="btn-info">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-    <select class="selectpicker" data-style="btn-success">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-    <select class="selectpicker" data-style="btn-warning">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-    <select class="selectpicker" data-style="btn-danger">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
-    </select>
-    <select class="selectpicker" data-style="btn-inverse">
-        <option>Mustard</option>
-        <option>Ketchup</option>
-        <option>Relish</option>
+    Campus:
+    <select [(ngModel)]="campus" class="selectpicker" data-style="btn-primary">
+        <option value = 0>All</option>
+        <option value = 1>Bloomington</option>
+        <option value = 2>Indianapolis</option>
+        <option value = 3>South Bend</option>
+    </select> Semester:
+    <select [(ngModel)]="semester" class="selectpicker" data-style="btn-info">
+        <option value = 0>All</option>
+        <option value = 1>Fall</option>
+        <option value = 2>Spring</option>
+        <option value = 3>Summer</option>
+    </select> School:
+    <select [(ngModel)]="school" class="selectpicker" data-style="btn-success">
+        <option value = 0>All</option>
+        <option value = 1>School of Informatics</option>
+        <option value = 2>School of Media</option>
+        <option value = 3>School of Business</option>
+    </select> Grade:
+    <select [(ngModel)]="grade" class="selectpicker" data-style="btn-warning">
+        <option value = 0>All</option>
+        <option value = 1>A</option>
+        <option value = 2>B</option>
+        <option value = 3>C</option>
+        <option value = 4>D</option>
+        <option value = 5>F</option>
+        <option value = 6>W</option>
+    </select> ModeOfInstruction:
+    <select [(ngModel)]="modeofinstruction" class="selectpicker" data-style="btn-danger">
+        <option value = 0>All</option>
+        <option value = 1>Online</option>
+        <option value = 2>In-Person</option>
+        <option value = 3>Hybrid</option>
     </select>
 </section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <h3 class="display-7">Instructions:</h3>
+                <p class="lead">Select your desired filters and export your transcript to pdf using the button below.</p>
+                <hr class="my-4">
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" (click)="downloadMyFile()" role="button">Export to PDF</a>
+                </p>
+            </div>
+        </div>
+    </div>
